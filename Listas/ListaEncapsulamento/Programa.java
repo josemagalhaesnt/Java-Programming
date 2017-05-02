@@ -1,16 +1,15 @@
-package ListaEncapsulamento;
- 
-public class Programa {
+ package ListaEncapsulamento;
+ public class Programa {
 
 	/** Atributos **/
+     
 	int i;
 	int aux;
 	Lampada l1 = new Lampada();
 		
 	/* Método Principal */
 	
-	public static void main (String args[]) 
-	{
+	public static void main (String args[]) {
 	
 		l1.setStatus(false);
 		l1.setCont(0);

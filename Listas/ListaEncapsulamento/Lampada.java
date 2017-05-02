@@ -1,13 +1,13 @@
 package ListaEncapsulamento;
- 
+
 public class Lampada {
-		/** Atributos **/
+	/** Atributos **/
 		
 	private boolean status;
 	private int cont;
 	
-		/** Getters and Setters **/
-	
+	/** Getters and Setters **/
+   
 	public boolean getStatus(){
 		return status;
 	}
@@ -24,26 +24,26 @@ public class Lampada {
 		this.cont = cont;
 	}
 	
-		/** Métodos da Classe **/
+	/** Métodos da Classe **/
 		
 	public void ligar() {
 			
-		if (l1.getStatus() == false)
-			l1.setStatus(true);
+		if (getStatus() == false)
+			setStatus(true);
 		else 
-			l1.setStatus(false);
+			setStatus(false);
 			
 	} 
 	
 	public void verificar() {
 	
 		if (getStatus() == true) 
-			system.out.println("A lampada esta ligada");
+			System.out.println("A lampada esta ligada");
 			
 		else if (getCont() >= 100) 
-			system.out.println("A lampada esta desligada");
+			System.out.println("A lampada esta desligada");
 		else
-			system.out.println("A lampada esta queimada");
+			System.out.println("A lampada esta queimada");
 		
 	}
 	
