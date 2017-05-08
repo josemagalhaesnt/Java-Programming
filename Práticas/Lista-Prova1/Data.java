@@ -47,6 +47,13 @@ public class Data {
 			return false;
 	}
 	
+	public boolean anoBissexto(int ano){
+		if ((ano % 4 == 0) || (ano % 400 == 0))
+			return true;
+		else
+			return false;
+	}
+	
 	public boolean validaData(){
 		
 		if ((getDia() > 0 && getDia() <= 31) && (getMes() > 0 && getMes()<=12)){
@@ -82,6 +89,44 @@ public class Data {
 		
 		else
 			return false;
+	}
+	
+	public boolean validaData(int dia, int mes, int ano){
+		
+		if (dia > 0 && dia <= 31 && mes > 0 && mes <=12){
+			if (mes == 1 && dia <= 31)
+				return true;
+			if (mes == 2 && dia <= 28 && anoBissexto(ano) == false) 
+				return true;
+			if (mes == 2 && dia <= 29 && anoBissexto(ano) == true) 
+				return true;
+			if (mes == 3 && dia <= 31)
+				return true;
+			if (mes == 4 && dia <= 30)
+				return true;
+			if (mes == 5 && dia <= 31)
+				return true;
+			if (mes == 6 && dia <= 30)
+				return true;
+			if (mes == 7 && dia <= 31)
+				return true;
+			if (mes == 8 && dia <= 31)
+				return true;
+			if (mes == 9 && dia <= 30)
+				return true;
+			if (mes == 10 && dia <= 31)
+				return true;
+			if (mes == 11 && dia <= 30)
+				return true;
+			if (mes == 12 && dia <= 31)
+				return true;
+			else
+				return false;	
+		}
+		
+		else
+			return false;
+		
 	}
 
 }
