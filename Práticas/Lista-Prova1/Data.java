@@ -40,12 +40,21 @@ public class Data {
 		System.out.println(getDia() + "/" + getMes() + "/" + getAno());
 	}
 	
+	public boolean anoBissexto(){
+		if ((getAno()% 4 == 0) || (getAno()% 400 == 0))
+			return true;
+		else
+			return false;
+	}
+	
 	public boolean validaData(){
 		
 		if ((getDia() > 0 && getDia() <= 31) && (getMes() > 0 && getMes()<=12)){
 			if (getMes() == 1 && getDia() <= 31)
 				return true;
-			if (getMes() == 2 && getDia() <= 29) 
+			if (getMes() == 2 && getDia() <= 28 && anoBissexto() == false) 
+				return true;
+			if (getMes() == 2 && getDia() <= 29 && anoBissexto() == true) 
 				return true;
 			if (getMes() == 3 && getDia() <= 31)
 				return true;

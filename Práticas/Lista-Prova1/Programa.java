@@ -5,9 +5,9 @@ public class Programa {
 	public static void main(String[] args) {
 		
 		Data d1 = new Data ();
-		d1.setDia(1);
-		d1.setMes(10);
-		d1.setAno(1995);
+		d1.setDia(29);
+		d1.setMes(2);
+		d1.setAno(2012);
 		
 		if (d1.validaData() == true)
 			d1.imprimeData();
