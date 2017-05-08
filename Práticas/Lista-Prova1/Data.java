@@ -37,11 +37,11 @@ public class Data {
 	//Métodos da Classe
 
 	public void imprimeData(){
-		System.out.println(getDia() + "/" + getMes() + "/" + getAno());
+		System.out.println(this.getDia() + "/" + this.getMes() + "/" + this.getAno());
 	}
 	
 	public boolean anoBissexto(){
-		if ((getAno()% 4 == 0) || (getAno()% 400 == 0))
+		if ((this.getAno()% 4 == 0 && this.getAno() % 100 != 0 ) || (this.getAno()% 400 == 0))
 			return true;
 		else
 			return false;
@@ -56,32 +56,32 @@ public class Data {
 	
 	public boolean validaData(){
 		
-		if ((getDia() > 0 && getDia() <= 31) && (getMes() > 0 && getMes()<=12)){
-			if (getMes() == 1 && getDia() <= 31)
+		if ((this.getDia() > 0 && this.getDia() <= 31) && (this.getMes() > 0 && this.getMes() <= 12)){
+			if (this.getMes() == 1 && this.getDia() <= 31)
 				return true;
-			if (getMes() == 2 && getDia() <= 28 && anoBissexto() == false) 
+			if (this.getMes() == 2 && this.getDia() <= 28 && this.anoBissexto() == false) 
 				return true;
-			if (getMes() == 2 && getDia() <= 29 && anoBissexto() == true) 
+			if (this.getMes() == 2 && this.getDia() <= 29 && this.anoBissexto() == true) 
 				return true;
-			if (getMes() == 3 && getDia() <= 31)
+			if (this.getMes() == 3 && this.getDia() <= 31)
 				return true;
-			if (getMes() == 4 && getDia() <= 30)
+			if (this.getMes() == 4 && this.getDia() <= 30)
 				return true;
-			if (getMes() == 5 && getDia() <= 31)
+			if (this.getMes() == 5 && this.getDia() <= 31)
 				return true;
-			if (getMes() == 6 && getDia() <= 30)
+			if (this.getMes() == 6 && this.getDia() <= 30)
 				return true;
-			if (getMes() == 7 && getDia() <= 31)
+			if (this.getMes() == 7 && this.getDia() <= 31)
 				return true;
-			if (getMes() == 8 && getDia() <= 31)
+			if (this.getMes() == 8 && this.getDia() <= 31)
 				return true;
-			if (getMes() == 9 && getDia() <= 30)
+			if (this.getMes() == 9 && this.getDia() <= 30)
 				return true;
-			if (getMes() == 10 && getDia() <= 31)
+			if (this.getMes() == 10 && this.getDia() <= 31)
 				return true;
-			if (getMes() == 11 && getDia() <= 30)
+			if (this.getMes() == 11 && this.getDia() <= 30)
 				return true;
-			if (getMes() == 12 && getDia() <= 31)
+			if (this.getMes() == 12 && this.getDia() <= 31)
 				return true;
 			else
 				return false;	
@@ -96,9 +96,9 @@ public class Data {
 		if (dia > 0 && dia <= 31 && mes > 0 && mes <=12){
 			if (mes == 1 && dia <= 31)
 				return true;
-			if (mes == 2 && dia <= 28 && anoBissexto(ano) == false) 
+			if (mes == 2 && dia <= 28 && this.anoBissexto(ano) == false) 
 				return true;
-			if (mes == 2 && dia <= 29 && anoBissexto(ano) == true) 
+			if (mes == 2 && dia <= 29 && this.anoBissexto(ano) == true) 
 				return true;
 			if (mes == 3 && dia <= 31)
 				return true;
