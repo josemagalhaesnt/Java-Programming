@@ -28,19 +28,19 @@ public class Lampada {
 		
 	public void ligar() {
 			
-		if (getStatus() == false)
-			setStatus(true);
+		if (this.getStatus() == false)
+			this.setStatus(true);
 		else 
-			setStatus(false);
+			this.setStatus(false);
 			
 	} 
 	
 	public void verificar() {
 	
-		if (getStatus() == true) 
+		if (this.getStatus() == true) 
 			System.out.println("A lampada esta ligada");
 			
-		else if (getCont() >= 100) 
+		else if (this.getCont() <= 100) 
 			System.out.println("A lampada esta desligada");
 		else
 			System.out.println("A lampada esta queimada");
