@@ -7,19 +7,6 @@ Trabalho de POO
 Uma imagem é uma matriz (Array multidimensional), ou seja ela possui uma altura (A), largura (L) e cada célula (i, j) , 
 i = 1 .. L, j = 1 .. A é chamada de píxel.
 
-Ex. Imagem 7x4.
-
-  1   2   3   4   5   6   7  
-+---+---+---+---+---+---+---+
-|   |	|   |	|   |	|   | 1
-+---+---+---+---+---+---+---+
-|   |	|   |	|   |	|   | 2
-+---+---+---+---+---+---+---+
-|   |	|   |	|   |	|   | 3
-+---+---+---+---+---+---+---+
-|   |	|   |	|   |	|   | 4
-+---+---+---+---+---+---+---+
-
 Cada píxel(célula da matriz) possui um valor inteiro entre 0 e K, onde K geralmente é 255. Os píxels com valores próximos de 
 zero são escuros (0 é preto total) e píxels próximos de K são píxels mais claros (K é branco).
 
