@@ -1,4 +1,4 @@
-package lista_prova;
+package questao20_data;
 
 public class Programa {
 	
