@@ -1,5 +1,5 @@
- package ListaEncapsulamento;
- public class Programa {
+package questao24_lampada;
+public class Programa {
 
 	/* Método Principal */
 	
@@ -13,16 +13,12 @@
 		l1.setCont(0);
 		aux = 0;
 		
-		for (i = 0; i < 100; i++) {
-		
+		for (i = 0; i < 200; i++) {
 			l1.ligar();
 			l1.verificar();
 			
 			if (l1.getStatus() == true)
-				l1.setCont(aux++); 
-								
+				l1.setCont(aux += 1); 					
 		}
-		
-	}
-	
+	}	
 }
