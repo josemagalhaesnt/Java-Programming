@@ -1,4 +1,5 @@
 Trabalho de POO
+Prof Lucas Silva
 
 -------------
  Fundamentos
@@ -16,17 +17,6 @@ Um tipo de arquivo muito simples é o PGM Plain, pois a imagem é armazenada em 
 --------------------------------
  ESTRUTURA DO ARQUIVO PGM PLAIN
 --------------------------------
-
-P2
-L A
-MAX
-p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 ...
-p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 ...
-p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 ...
-p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 ...
-p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 ...
-p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 ...
-
 Regras iniciais:
 
 	- Dentro do arquivo PGM podem ocorrer comentários precedidos do caractere #. Podem ocorrer no início de linhas ou ao final. 
