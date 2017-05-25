@@ -26,14 +26,17 @@ public class Estacao {
     }
     
     /** Métodos da Classe **/
-    
-    /** Métodos da Classe **/
-    public void cadastraLinhas(Linha l){
+    public void cadastraLinha(Linha l){
+        
         int i;
-        //Se a linha recebida não estiver na lista
+
         for (i = 0; i < linhas.size(); i++){
-            if (linhas.get(i).getSigla().equals(l.getSigla()))
+
+            //Se a linha já estiver na lista, emitir mensagem
+            if (linhas.get(i).getNumero().equals(l.getNumero()))
                 System.out.println("Essa linha ja esta cadastrada");
+
+            //Senão, adicionar ela à lista
             else { 
                 linhas.add(l);
                 System.out.println("Linha cadastrada com sucesso !");
@@ -41,16 +44,34 @@ public class Estacao {
         }
     }
     
- public void removeLinhas(Linha l){
+    public void removeLinha(Linha l){
+        
         int i;
-        //Se a linha recebida não estiver na lista
+    
         for (i = 0; i < linhas.size(); i++){
-            if (linhas.get(i).getSigla().equals(l.getSigla())){
-                linhas.add(l);
-                System.out.println("Linha cadastrada com sucesso !");
-            }    
+
+            //Se a linha selecionada estiver na lista, removê-la
+            if (linhas.get(i).getNumero().equals(l.getNumero())){
+                linhas.remove(l);
+                System.out.println("Linha removida com sucesso !");
+            }
+            
+            //Senão, emitir mensagem    
             else  
-                System.out.println("Essa linha nao esta nesse terminal");    
+                System.out.println("Essa linha nao esta nessa estacao");    
+        }
+    }
+
+    public void mostraLinhas(){
+        
+        int i;
+        
+        for (i=0; i < linhas.size(); i++){
+            System.out.println("Linha: " + linhas.get(i).getNumero());
+            System.out.println("Extensao: " + linhas.get(i).getExtensao());
+            System.out.println("Descricao: " + linhas.get(i).getDescricao());
+            System.out.println(" ");  
+
         }
     }
     

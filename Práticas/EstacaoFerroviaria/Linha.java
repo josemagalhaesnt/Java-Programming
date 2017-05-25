@@ -3,16 +3,36 @@ package estacao;
 public class Linha {
     
     /** Atributos da Classe **/
-    private String sigla;
+    private int numero;
+    private float extensao;
     private String descricao;
-    
-    /** Getters and Setters **/
-    public String getSigla() {
-        return sigla;
+
+    /** Construtores da Classe **/
+    public Linha (int numero) {
+        this.setNumero(numero);
     }
 
-    public void setSigla(String sigla) {
-        this.sigla = sigla;
+    public Linha (int numero, float extensao, String descricao) {
+        this(numero);
+        this.setExtensao(extensao);
+        this.setDescricao(descricao);
+    }
+    
+    /** Getters and Setters **/
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public float getExtensao() {
+        return extensao;
+    }
+
+    public void setExtensao(float extensao) {
+        this.extensao = extensao;
     }
 
     public String getDescricao() {
@@ -22,6 +42,10 @@ public class Linha {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    /** Métodos da Classe **/
+
+   
     
     
 }
