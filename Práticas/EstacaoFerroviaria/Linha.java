@@ -1,21 +1,24 @@
 package estacao;
+import java.util.ArrayList;
 
 public class Linha {
     
     /** Atributos da Classe **/
     private int numero;
-	private double extensao;
+    private double extensao;
     private String descricao;
+    private ArrayList<Estacao> estacoes;
 
     /** Construtores da Classe **/
+    
     public Linha (int numero) {
-        this.setNumero(numero);
+        this.numero = numero;
     }
 
     public Linha (int numero, double extensao, String descricao) {
         this(numero);
-        this.setExtensao(extensao);
-        this.setDescricao(descricao);
+        this.extensao = extensao;
+        this.descricao = descricao;
     }
     
     /** Getters and Setters **/
@@ -45,7 +48,4 @@ public class Linha {
 
     /** Métodos da Classe **/
 
-   
-    
-    
-}
+} /** Fim da Classe **/
