@@ -7,7 +7,6 @@ public class Linha {
     private int numero;
     private double extensao;
     private String descricao;
-    private ArrayList<Estacao> estacoes;
 
     /** Construtores da Classe **/
     
@@ -15,10 +14,9 @@ public class Linha {
         this.numero = numero;
     }
 
-    public Linha (int numero, double extensao, String descricao) {
+    public Linha (int numero, double extensao) {
         this(numero);
         this.extensao = extensao;
-        this.descricao = descricao;
     }
     
     /** Getters and Setters **/

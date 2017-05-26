@@ -7,11 +7,13 @@ public class Trem {
     private String dataFormacao;
     private Estacao origem;
     private Estacao destino;
+    private Vagao numVagoes;
     
     /** Construtores **/
     public Trem (String prefixo, String dataFormacao){
         this.prefixo = prefixo;
         this.dataFormacao = dataFormacao;
+    
     }
     
     public Trem (String prefixo, String dataFormacao, Estacao origem, Estacao destino){
@@ -29,6 +31,14 @@ public class Trem {
         this.prefixo = prefixo;
     }
 
+    public Vagao getNumVagoes() {
+        return numVagoes;
+    }
+
+    public void setNumVagoes(Vagao numVagoes) {
+        this.numVagoes = numVagoes;
+    }
+
     public String getDataFormacao() {
         return dataFormacao;
     }
@@ -37,10 +47,28 @@ public class Trem {
         this.dataFormacao = dataFormacao;
     }
     
+     public Estacao getOrigem() {
+        return origem;
+    }
+
+    public void setOrigem(Estacao origem) {
+        this.origem = origem;
+    }
+
+    public Estacao getDestino() {
+        return destino;
+    }
+
+    public void setDestino(Estacao destino) {
+        this.destino = destino;
+    }
+    
     /** Métodos da Classe **/
     public boolean transportar(){
-        return this.origem != this.destino;
+        return this.getOrigem() != this.getDestino();
     }
+
+   
     
     
     

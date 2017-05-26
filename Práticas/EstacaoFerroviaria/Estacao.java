@@ -5,11 +5,13 @@ public class Estacao {
     
     /**Atributos da Classe **/
     private String nome;
+    private ArrayList<Trem> trens;
     private ArrayList<Linha> linhas;
     
     /** Construtores **/
     public Estacao (String nome){
         this.nome = nome;
+        this.trens = new ArrayList<Trem>();
         this.linhas = new ArrayList<Linha>();
     }
     
@@ -22,6 +24,14 @@ public class Estacao {
         this.nome = nome;
     }
     
+    public ArrayList<Trem> getTrens() {
+        return trens;
+    }
+
+    public void setTrens(ArrayList<Trem> trens) {
+        this.trens = trens;
+    }
+
     public ArrayList<Linha> getLinhas() {
         return linhas;
     }
@@ -31,15 +41,17 @@ public class Estacao {
     }
     
     /** Métodos da Classe **/
-   
-    public void mostraLinhas(){
+    
+    public void detalharViagem(){
         
         int k;
         
-        for (k=0; k < linhas.size(); k++){
-            System.out.println("Linha: " + linhas.get(k).getNumero());
-            System.out.println("Extensao: " + linhas.get(k).getExtensao() + " km");
-            System.out.println("Descricao/Percurso: " + linhas.get(k).getDescricao());
+        for (k=0; k < trens.size(); k++){
+            System.out.println(" "); 
+            System.out.println("Trem: " + trens.get(k).getPrefixo());
+            System.out.println("Data de Formacao: " + trens.get(k).getDataFormacao());
+            System.out.println("Origem: " + trens.get(k).getOrigem().getNome());
+            System.out.println("Destino: " + trens.get(k).getDestino().getNome());
             System.out.println(" ");  
 
         }
