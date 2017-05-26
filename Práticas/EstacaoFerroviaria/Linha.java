@@ -4,7 +4,7 @@ public class Linha {
     
     /** Atributos da Classe **/
     private int numero;
-    private float extensao;
+	private double extensao;
     private String descricao;
 
     /** Construtores da Classe **/
@@ -12,7 +12,7 @@ public class Linha {
         this.setNumero(numero);
     }
 
-    public Linha (int numero, float extensao, String descricao) {
+    public Linha (int numero, double extensao, String descricao) {
         this(numero);
         this.setExtensao(extensao);
         this.setDescricao(descricao);
@@ -27,11 +27,11 @@ public class Linha {
         this.numero = numero;
     }
 
-    public float getExtensao() {
+    public double getExtensao() {
         return extensao;
     }
 
-    public void setExtensao(float extensao) {
+    public void setExtensao(double extensao) {
         this.extensao = extensao;
     }
 

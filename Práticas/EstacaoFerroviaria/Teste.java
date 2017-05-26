@@ -11,8 +11,11 @@ public class Teste {
     	Linha jovita_feitosa = new Linha (389, 3, "Ant Bezerra - Benfica - Centro");
 
     	Estacao parangaba = new Estacao ();
-    	parangaba.cadastraLinhas(circular);
-    	parangaba.cadastraLinhas(parangaba_papicu_montese);
+    	parangaba.cadastraLinha(circular);
+    	parangaba.cadastraLinha(parangaba_papicu_montese);
+    	parangaba.cadastraLinha(jovita_feitosa);
+    	parangaba.removeLinha(jovita_feitosa);
+    	parangaba.mostraLinhas();
         
         
     }

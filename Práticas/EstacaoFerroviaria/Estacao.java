@@ -6,14 +6,14 @@ public class Estacao {
 
     /**Atributos da Classe **/
     private ArrayList<Linha> linhas;
-    private ArrayList<Trem> trens;
-    private ArrayList<Vagao> vagoes;
-    private ArrayList<Locomotiva> locomotivas;
-    private static int qtRecursos;
+    //private ArrayList<Trem> trens;
+    //private ArrayList<Vagao> vagoes;
+    //private ArrayList<Locomotiva> locomotivas;
+    //private static int qtRecursos;
     
     /** Construtores **/
-    public Estacao (ArrayList<Linha> linhas){
-        this.linhas = linhas;
+    public Estacao (){
+        this.linhas = new ArrayList<Linha>();
     }
     
     /** Getters and Setters **/
@@ -33,7 +33,7 @@ public class Estacao {
         for (i = 0; i < linhas.size(); i++){
 
             //Se a linha já estiver na lista, emitir mensagem
-            if (linhas.get(i).getNumero().equals(l.getNumero()))
+            if (linhas.get(i).getNumero() == (l.getNumero()))
                 System.out.println("Essa linha ja esta cadastrada");
 
             //Senão, adicionar ela à lista
@@ -51,7 +51,7 @@ public class Estacao {
         for (i = 0; i < linhas.size(); i++){
 
             //Se a linha selecionada estiver na lista, removê-la
-            if (linhas.get(i).getNumero().equals(l.getNumero())){
+            if (linhas.get(i).getNumero() == (l.getNumero())){
                 linhas.remove(l);
                 System.out.println("Linha removida com sucesso !");
             }
