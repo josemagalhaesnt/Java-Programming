@@ -1,3 +1,4 @@
+package universidade;
 public class Endereco {
 
 	// Atributos

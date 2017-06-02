@@ -1,9 +1,10 @@
+package universidade;
 public class Seguranca extends Funcionario {
-	// Atributos
+    // Atributos
 
-	//Construtores
+    //Construtores
 
-	//Getters e Setters
+    //Getters e Setters
 
-	//Métodos
+    //Métodos
 }
