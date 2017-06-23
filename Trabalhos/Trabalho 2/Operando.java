@@ -11,7 +11,7 @@ public class Operando extends Numero {
 	
 	/** Getters and Setters **/
 	
-	/** Métodos **/
+	/** MÃ©todos **/
 	public float avaliar (){
 		return valor;
 	}

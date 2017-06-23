@@ -19,7 +19,7 @@ public class Numero {
 		this.valor = valor;
 	}
 	
-	/** Métodos **/
+	/** MÃ©todos **/
 	
 
 }

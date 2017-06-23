@@ -8,7 +8,7 @@ public class DivisaoPorZeroException extends RuntimeException {
 		 this.mensagem = mensagem;
 	}
 	
-	/** Métodos **/
+	/** MÃ©todos **/
 	@Override
 	public String getMessage(){
 		return this.mensagem;

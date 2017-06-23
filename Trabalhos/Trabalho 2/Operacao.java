@@ -26,7 +26,7 @@ public abstract class Operacao {
 		this.simboloOperador = simboloOperador;
 	}
 	
-	/** Métodos **/
-	public abstract float calculaResultado (Operando o);
+	/** MÃ©todos **/
+	public abstract float calculaResultado (Operando ...operandos);
 	//return resultado
 }

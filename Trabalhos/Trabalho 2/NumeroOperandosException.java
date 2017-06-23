@@ -8,7 +8,7 @@ public class NumeroOperandosException extends RuntimeException {
 		
 	}
 	
-	/** Métodos **/
+	/** MÃ©todos **/
 	@Override
 	public String toString (){
 		return super.getMessage();
