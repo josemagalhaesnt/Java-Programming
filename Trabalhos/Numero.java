@@ -3,7 +3,7 @@ package atividadepratica;
 public class Numero {
 	
 	/** Atributos **/
-	private float valor;
+	protected float valor;
 
 	/** Construtor **/
 	public Numero(float valor) {
