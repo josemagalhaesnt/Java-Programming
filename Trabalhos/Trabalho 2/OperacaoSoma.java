@@ -2,10 +2,6 @@ package atividadepratica;
 
 public class OperacaoSoma extends OperacaoBinaria {
 	
-	/** Atributos **/
-	float resultado = 0;
-	float[] num;
-	
 	/** Construtor **/
 	public OperacaoSoma(String nome, String simboloOperador) {
 		super(nome, simboloOperador);
@@ -13,13 +9,22 @@ public class OperacaoSoma extends OperacaoBinaria {
 	
 	/** Métodos **/
 	@Override
-	public float calculaResultado(Operando...operandos) {
-		int i;
+	public float calculaResultado(Operando...operandos) throws NumeroOperandosException {
 		
-		for (i = 0; i < 2; i++)
-			num[i] = operandos[i].getValor();
+		try {
+			if (operandos.length == 2) {
+				float resultado = operandos[0].getValor() + operandos[1].getValor();
+				return resultado;
+			}
+			else if (operandos.length == 1){
+				float resultado = operandos[0].getValor();
+				return resultado;
+			}
 		
-		this.resultado = num[0] + num[1];
-		return this.resultado;
+		} catch (NumeroOperandosException e){
+				e.getMessage();
+		}
+	return -1;
 	}
 }
+

@@ -2,10 +2,6 @@ package atividadepratica;
 
 public class MenosUnario extends OperacaoUnaria {
 	
-	/** Atributos **/
-	float resultado = 0;
-	float[] num;
-	
 	/** Construtor **/
 	public MenosUnario(String nome, String simboloOperador) {
 		super(nome, simboloOperador);
@@ -14,13 +10,17 @@ public class MenosUnario extends OperacaoUnaria {
 	/** Métodos **/
 	@Override
 	public float calculaResultado(Operando...operandos) {
-		int i;
-		for (i = 0; i < 1; i ++)
-			num[i] = operandos[i].getValor();
+		try {
+			if (operandos.length == 1){
+				float resultado = 0;
+				resultado -= operandos[0].getValor();
+				return resultado;
+			}
+		} catch (NullPointerException e){
+			System.out.println("Quantidade de operandos invalida");
+		}
 		
-		this.resultado -= num[0];
-		
-		return this.resultado;
+		return 0;
 	}
 
 }

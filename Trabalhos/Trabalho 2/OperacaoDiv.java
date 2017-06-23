@@ -15,13 +15,29 @@ public class OperacaoDiv extends OperacaoBinaria {
 	/** Métodos **/
 	@Override
 	public float calculaResultado(Operando...operandos) {
-		int i;
+		try {
+			try {
+				if (operandos.length == 2) {
+					if (operandos[0].getValor() > 0 || operandos[1].getValor() > 0){
+						float resultado = operandos[0].getValor() / operandos[1].getValor();
+						return resultado;
+					}
+				}
+				else if (operandos.length == 1){
+					if (operandos[0].getValor() > 0 || operandos[1].getValor() > 0){ 
+						float resultado = operandos[0].getValor();
+						return resultado;
+					}
+				}
+			} catch (DivisaoPorZeroException e){
+				e.getMessage();
+			}
+			
+		} catch (NumeroOperandosException e){
+			e.getMessage();
+		}
 		
-		for (i = 0; i < 2; i++)
-			num[i] = operandos[i].getValor();
-		
-		this.resultado = num[0] / num[1];
-		return this.resultado;
+		return 0;
 	}
 
 }

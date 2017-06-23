@@ -2,10 +2,6 @@ package atividadepratica;
 
 public class OperacaoSubt extends OperacaoBinaria {
 	
-	/** Atributos **/
-	float resultado = 0;
-	float[] num;
-	
 	/** Construtor **/
 	public OperacaoSubt(String nome, String simboloOperador) {
 		super(nome, simboloOperador);
@@ -15,13 +11,21 @@ public class OperacaoSubt extends OperacaoBinaria {
 	/** Métodos **/
 	@Override
 	public float calculaResultado(Operando...operandos) {
-		int i;
-	
-		for (i = 0; i < 2; i++)
-			num[i] = operandos[i].getValor();
+
+		try {
+			if (operandos.length == 2) {
+				float resultado = operandos[0].getValor() - operandos[1].getValor();
+				return resultado;
+			}
+			else if (operandos.length == 1){
+				float resultado = operandos[0].getValor();
+				return resultado;
+			}
+		} catch (NumeroOperandosException e){
+			e.getMessage();
+		}
 		
-		this.resultado = num[0] - num[1];
-		return this.resultado;
+		return 0;
 	}
 
 }

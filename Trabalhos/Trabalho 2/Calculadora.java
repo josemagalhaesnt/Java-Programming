@@ -21,42 +21,54 @@ public class Calculadora {
 			
 			switch(op) {
 			case "+":
-				Operacao soma = new OperacaoSoma("Soma", "+");
+				OperacaoSoma soma = new OperacaoSoma("Soma", "+");
 				System.out.println("Digite o primeiro valor: ");
 				Operando op1 = new Operando (teclado.nextFloat());
 				System.out.println("Digite o segundo valor: ");
 				Operando op2 = new Operando (teclado.nextFloat());
-				System.out.printf("Resultado = %.2f", soma.calculaResultado(op1,op2));
+				System.out.println("");
+				System.out.println("Operacao: " + op1.getValor() + " " + soma.getSimboloOperador() + " " + op2.getValor());
+				System.out.println("");
+				System.out.println("Resultado = " + soma.calculaResultado(op1,op2));
 				System.out.println("");
 				break;
 				
 			case "-":
-				Operacao subt = new OperacaoSubt("Subtracao", "-");
+				OperacaoSubt subt = new OperacaoSubt("Subtracao", "-");
 				System.out.println("Digite o primeiro valor: ");
 				Operando op3 = new Operando (teclado.nextFloat());
 				System.out.println("Digite o segundo valor: ");
 				Operando op4 = new Operando (teclado.nextFloat());
-				System.out.printf("Resultado = %.2f ", subt.calculaResultado(op3,op4));
+				System.out.println("");
+				System.out.println("Operacao: " + op3.getValor() + " " + subt.getSimboloOperador() + " " + op4.getValor());
+				System.out.println("");
+				System.out.println("Resultado = " + subt.calculaResultado(op3,op4));
 				System.out.println("");
 				break;
 				
 			case "*":
-				Operacao mult = new OperacaoMult("Multiplicacao", "*");
+				OperacaoMult mult = new OperacaoMult("Multiplicacao", "*");
 				System.out.println("Digite o primeiro valor: ");
 				Operando op5 = new Operando (teclado.nextFloat());
 				System.out.println("Digite o segundo valor: ");
 				Operando op6 = new Operando (teclado.nextFloat());
-				System.out.printf("Resultado = %.2f", mult.calculaResultado(op5,op6));
+				System.out.println("");
+				System.out.println("Operacao: " + op5 + " " + mult.getSimboloOperador() + " " + op6);
+				System.out.println("");
+				System.out.println("Resultado = " + mult.calculaResultado(op5,op6));
 				System.out.println("");
 				break;
 				
 			case "/":
-				Operacao div = new OperacaoDiv("Divisao", "/");
+				OperacaoDiv div = new OperacaoDiv("Divisao", "/");
 				System.out.println("Digite o primeiro valor: ");
 				Operando op7 = new Operando (teclado.nextFloat());
 				System.out.println("Digite o segundo valor: ");
 				Operando op8 = new Operando (teclado.nextFloat());
-				System.out.printf("Resultado = %.2f", div.calculaResultado(op7,op8));
+				System.out.println("");
+				System.out.println("Operacao: " + op7.getValor() + " " + div.getSimboloOperador() + " " + op8.getValor());
+				System.out.println("");
+				System.out.println("Resultado = " + div.calculaResultado(op7,op8));
 				System.out.println("");
 				break;
 			
@@ -64,6 +76,7 @@ public class Calculadora {
 				Operacao inv = new MenosUnario("Inversor","#");
 				System.out.println("Digite o valor ao qual deseja inverter: ");
 				Operando op9 = new Operando (teclado.nextFloat());
+				System.out.println("");
 				System.out.printf("Resultado = %.2f", inv.calculaResultado(op9));
 				System.out.println("");
 				break;
