@@ -6,12 +6,15 @@ public class DivisaoPorZeroException extends RuntimeException {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String mensagem = "Nao eh possivel dividir um numero por zero";
+	private String mensagem;
 	
 	/** Construtor **/
+	
 	public DivisaoPorZeroException (String mensagem){
 		 this.mensagem = mensagem;
 	}
+	
+	public DivisaoPorZeroException(){}
 	
 	/** Métodos **/
 	@Override

@@ -10,17 +10,23 @@ public class MenosUnario extends OperacaoUnaria {
 	/** Métodos **/
 	@Override
 	public float calculaResultado(Operando...operandos) {
-		try {
-			if (operandos.length == 1){
-				float resultado = 0;
-				resultado -= operandos[0].getValor();
-				return resultado;
-			}
-		} catch (NullPointerException e){
-			System.out.println("Quantidade de operandos invalida");
-		}
+		float resultado = 0;
 		
-		return 0;
+			if (operandos.length == 1)
+				resultado -= operandos[0].getValor();
+			
+		return resultado;
 	}
+	
+	public boolean validaOp(Operando...operandos) throws NumeroOperandosException{
+		if (operandos.length == 1){ 
+			return true;
+		}
 
+		else 
+			throw new NumeroOperandosException();	
+	}
 }
+
+
+

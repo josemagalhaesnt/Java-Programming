@@ -6,11 +6,12 @@ public class NumeroOperandosException extends RuntimeException {
 	String mensagem;
 
 	/** Construtor **/
-	public NumeroOperandosException (){
-		 this.mensagem = "Numero de operandos invalidos, apenas 1 ou 2 operandos sao permitidos";	
-	}
+	
 	public NumeroOperandosException (String mensagem){
-		 this.mensagem = "Numero de operandos invalidos, apenas 1 ou 2 operandos sao permitidos";	
+		 this.mensagem = mensagem;	
+	}
+	
+	public NumeroOperandosException (){	
 	}
 	
 	/** Métodos **/

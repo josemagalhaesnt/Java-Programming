@@ -11,20 +11,20 @@ public class OperacaoMult extends OperacaoBinaria {
 	/** Métodos **/
 	@Override
 	public float calculaResultado(Operando...operandos) {
-		try {
-			if (operandos.length == 2) {
-				float resultado = operandos[0].getValor() * operandos[1].getValor();
-				return resultado;
-			}
-			else if (operandos.length == 1){
-				float resultado = operandos[0].getValor();
-				return resultado;
-			}
-		} catch (NumeroOperandosException e){
-			e.getMessage();
-		}
-		
-		return 0;
+		float resultado = 0;
+			if (operandos.length == 2) 
+				resultado = operandos[0].getValor() * operandos[1].getValor();
+				
+			else if (operandos.length == 1)
+				resultado = operandos[0].getValor();
+			
+			return resultado;
 	}
-
+	
+	public boolean validaOp(Operando...operandos) throws NumeroOperandosException{
+		if (operandos.length == 2)
+			return true;
+		else 
+			throw new NumeroOperandosException();	
+	}
 }

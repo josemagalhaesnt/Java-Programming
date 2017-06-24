@@ -11,21 +11,21 @@ public class OperacaoSubt extends OperacaoBinaria {
 	/** Métodos **/
 	@Override
 	public float calculaResultado(Operando...operandos) {
-
-		try {
+		float resultado = 0;
 			if (operandos.length == 2) {
-				float resultado = operandos[0].getValor() - operandos[1].getValor();
-				return resultado;
+				resultado = operandos[0].getValor() - operandos[1].getValor();
+				
 			}
 			else if (operandos.length == 1){
-				float resultado = operandos[0].getValor();
-				return resultado;
+				resultado = operandos[0].getValor();
 			}
-		} catch (NumeroOperandosException e){
-			e.getMessage();
-		}
-		
-		return 0;
+		return resultado;
 	}
 
+	public boolean validaOp(Operando...operandos) throws NumeroOperandosException{
+		if (operandos.length == 2)
+			return true;
+		else 
+			throw new NumeroOperandosException();	
+	}
 }

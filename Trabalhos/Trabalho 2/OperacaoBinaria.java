@@ -10,4 +10,6 @@ public abstract class OperacaoBinaria extends Operacao {
 	/** Métodos **/
 	public abstract float calculaResultado(Operando...operandos);
 	//return resultado
+	public abstract boolean validaOp(Operando...operandos);
+	
 }
